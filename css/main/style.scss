@@ -1,0 +1,171 @@
+@use "sass:math";
+@import "../circle/circle";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+}
+
+@mixin circle-wave($height, $percentage) {
+    @if $percentage > 0 and $percentage < 100 {
+        width: $height;
+
+        $main-color: color-picker($percentage);
+        $color-dark: #1a1a1a;
+
+        $color-anim-name: quote(color-anim + $percentage);
+        $border-anim-name: quote(border-anim + $percentage);
+
+        $anim-time: math.div($percentage, 8) + 10;
+
+        @include keyframes($border-anim-name) {
+            from {
+                border: solid 2px #ff0000;
+            }
+            to {
+                border: solid 2px $main-color;
+            }
+        }
+
+        animation: unquote($border-anim-name) math.div($percentage, 100) * 1s ease-out forwards 1;
+
+        box-shadow: 0 0 5px $main-color;
+        border-radius: 50%;
+        span {
+            width: 100%;
+            height: $height;
+            display: block;
+            border-radius: 50%;
+            border: solid 3px $color-dark;
+
+            position: relative;
+            overflow: hidden;
+            &::after {
+                content: "";
+                height: 250%;
+                width: 250%;
+                position: absolute;
+
+                left: -75%;
+                @include keyframes($color-anim-name) {
+                    from {
+                        background: #ff0000;
+                        top: 100%;
+                    }
+                    to {
+                        background: $main-color;
+                        top: 100% - $percentage;
+                    }
+                }
+                border-radius: math.random(5) + 40 + 1%;
+                animation: rotate360 $anim-time * 1s linear forwards infinite,
+                    unquote($color-anim-name) math.div($percentage, 75) * 1s ease-out forwards 1;
+                box-shadow: 0 0 20px $main-color;
+            }
+
+            &::before {
+                content: quote($percentage + "%");
+                font-size: 1.8rem;
+                z-index: 2;
+                position: absolute;
+                color: $main-color;
+                top: 50%;
+                right: 50%;
+                transform: translate(50%, -50%);
+                @if $percentage < 40 {
+                    filter: brightness(100%);
+                } @else {
+                    filter: brightness(75%);
+                }
+                text-shadow: 0 0 3px;
+            }
+        }
+    }
+}
+
+@keyframes rotate360 {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@mixin keyframes($name) {
+    @keyframes #{$name} {
+        @content;
+    }
+}
+
+@mixin animate($animation, $duration, $method, $times) {
+    animation: $animation $duration $method $times;
+}
+
+@function color-picker($percentage) {
+    $red: 255;
+    $green: 255;
+    @if $percentage < 50 {
+        $green: round(math.div(255 * $percentage, 100) * 2);
+    } @else if $percentage > 50 {
+        $red: round((255 - math.div(255 * $percentage, 100)) * 3);
+    }
+    @return darken($color: rgb($red, $green, 20), $amount: 5);
+}
+
+$small: 300px;
+$medium: 880px;
+.container {
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    &.dark {
+        background: #1a1a1a;
+    }
+    &.light {
+        background: #fff;
+    }
+    .cont {
+        width: 82%;
+        margin: 0 auto;
+        height: 100vh;
+        padding-top: 2rem;
+        .title {
+            color: rgb(238, 238, 238);
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 75px;
+            @media screen and (max-width: $medium) {
+                margin-bottom: 2rem;
+            }
+        }
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            @media screen and (max-width: $medium) {
+                flex-direction: column;
+                li {
+                    margin-bottom: 20px;
+                }
+            }
+            li:first-child {
+                @include circle-wave(170px, 14);
+            }
+            li:nth-child(2) {
+                @include circle-wave(170px, 27);
+            }
+            li:nth-child(3) {
+                @include circle-wave(170px, 61);
+            }
+            li:last-child {
+                @include circle-wave(170px, 82);
+            }
+        }
+    }
+}
