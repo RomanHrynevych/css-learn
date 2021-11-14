@@ -1,3 +1,16 @@
-
-
-/*# sourceMappingURL=circle.css.map */
+@-webkit-keyframes rotate360 {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate360 {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}/*# sourceMappingURL=circle.css.map */

@@ -1,0 +1,132 @@
+$red: #ff0000;
+$li-height: 170px;
+$color-dark: #1a1a1a;
+
+@mixin circle-wave($height, $percentage) {
+    @if $percentage > 0 and $percentage < 100 {
+        width: $height;
+
+        $main-color: color-picker($percentage);
+        $main-color-for-text: color-picker-for-text($percentage);
+        $color-dark: #1a1a1a;
+
+        $color-anim-name: quote(color-anim + $percentage);
+        $border-anim-name: quote(border-anim + $percentage);
+        $text-anim-name: quote(text-anim + $percentage);
+
+        $anim-time: math.div($percentage, 8) + 10;
+
+        @include keyframes($border-anim-name) {
+            from {
+                border: solid 2px #ff0000;
+                box-shadow: 0 0 5px #ff0000;
+            }
+            to {
+                border: solid 2px $main-color;
+                box-shadow: 0 0 5px $main-color;
+            }
+        }
+
+        animation: unquote($border-anim-name) math.div($percentage, 40) * 1s ease-out forwards 1;
+
+        border-radius: 50%;
+        span {
+            width: 100%;
+            height: $height;
+
+            border-radius: 50%;
+            border: solid 3px $color-dark;
+
+            position: relative;
+            overflow: hidden;
+
+            font-size: 1.8rem;
+            z-index: 2;
+
+            @include keyframes($text-anim-name) {
+                from {
+                    color: #ff0000;
+                }
+                to {
+                    @if $percentage > 40 {
+                        color: $main-color-for-text;
+                    } @else {
+                        color: $main-color;
+                    }
+                }
+            }
+
+            animation: unquote($text-anim-name) math.div($percentage, 40) * 1s ease-out forwards 1;
+
+            text-shadow: 0 0 3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &::after {
+                content: "";
+                height: 250%;
+                width: 250%;
+                position: absolute;
+                z-index: -1;
+                left: -75%;
+                @include keyframes($color-anim-name) {
+                    from {
+                        background: #ff0000;
+                        top: 100%;
+                        box-shadow: 0 0 20px #ff0000;
+                    }
+                    to {
+                        background: $main-color;
+                        top: 100% - $percentage;
+                        box-shadow: 0 0 20px $main-color;
+                    }
+                }
+                border-radius: math.random(5) + 40 + 1%;
+                animation: rotate360 $anim-time * 1s linear forwards infinite,
+                    unquote($color-anim-name) math.div($percentage, 40) * 1s ease-out forwards 1;
+            }
+        }
+    }
+}
+
+@keyframes rotate360 {
+    from {
+        transform: rotate(0);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@mixin keyframes($name) {
+    @keyframes #{$name} {
+        @content;
+    }
+}
+
+@mixin animate($animation, $duration, $method, $times) {
+    animation: $animation $duration $method $times;
+}
+
+@function color-picker($percentage) {
+    $red: 255;
+    $green: 255;
+    @if $percentage < 50 {
+        $green: round(math.div(255 * $percentage, 100) * 2);
+    } @else if $percentage > 50 {
+        $red: round((255 - math.div(255 * $percentage, 100)) * 3);
+    }
+    @return darken($color: rgb($red, $green, 20), $amount: 5);
+}
+
+@function color-picker-for-text($percentage) {
+    $red: 255;
+    $green: 255;
+    @if $percentage < 50 {
+        $green: round(math.div(255 * $percentage, 100) * 2);
+    } @else if $percentage > 50 {
+        $red: round((255 - math.div(255 * $percentage, 100)) * 3);
+    }
+    @return rgb($red - 70, $green - 70, 0);
+}

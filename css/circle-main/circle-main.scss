@@ -1,0 +1,15 @@
+@use "sass:math";
+@import "../circle/circle";
+
+li:first-child {
+    @include circle-wave($li-height, 14);
+}
+li:nth-child(2) {
+    @include circle-wave($li-height, 27);
+}
+li:nth-child(3) {
+    @include circle-wave($li-height, 61);
+}
+li:last-child {
+    @include circle-wave($li-height, 82);
+}
