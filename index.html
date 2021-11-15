@@ -4,13 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Wavy circle animation | Plugin</title>
     <!-- Styles link's -->
+    <link rel="stylesheet" href="css/fullpage.css" />
     <link rel="stylesheet" href="css/main/style.css" />
-
-    <!-- JS src's -->
-    <script defer src="js/main.js"></script>
-
     <!-- Fonts link's -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,20 +15,24 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <!-- JS src's -->
+    <script defer src="js/switch-theme.js"></script>
+    <script defer src="js/fullpage.js"></script>
+    <script defer src="js/fullpage-script.js"></script>
+    <script defer src="js/main.js"></script>
   </head>
-  <body>
-    <div class="container dark">
-      <div class="test">Scroll to see animation</div>
-      <div class="cont">
-        <!-- <div class="title">Circle waving animation framework</div> -->
+  <body class="dark">
+    <div id="fullpage">
+      <div class="section text">Scroll to see animation</div>
+      <div class="section">
         <ul class="circle-anim-ul">
-          <li circle-perc="14"><span>0%</span></li>
-          <li circle-perc="27"><span>0%</span></li>
-          <li circle-perc="61"><span>0%</span></li>
-          <li circle-perc="82"><span>0%</span></li>
+          <li class="circle-anim-li" circle-perc="14"><span>0%</span></li>
+          <li class="circle-anim-li" circle-perc="27"><span>0%</span></li>
+          <li class="circle-anim-li" circle-perc="61"><span>0%</span></li>
+          <li class="circle-anim-li" circle-perc="82"><span>0%</span></li>
         </ul>
       </div>
-      <section class="footer">Reveal code soon</section>
+      <div class="section footer">Reveal code soon</div>
     </div>
   </body>
 </html>

@@ -1,6 +1,44 @@
-$red: #ff0000;
-$li-height: 170px;
-$color-dark: #1a1a1a;
+@import "../circle-parameters/circle-param";
+body {
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    background: var(--color-dark);
+    .circle-anim-ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        @media screen and (max-width: $medium) {
+            flex-direction: column;
+            li {
+                margin-bottom: 20px;
+            }
+        }
+
+        li.circle-anim-li {
+            color: $red;
+            border: solid 2px $red;
+            border-radius: 50%;
+            width: $li-height;
+            box-shadow: 0 0 5px $red;
+
+            span {
+                width: 100%;
+                height: $li-height;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: solid 3px var(--color-dark);
+                border-radius: 50%;
+                position: relative;
+                overflow: hidden;
+
+                font-size: 1.8rem;
+                z-index: 2;
+            }
+        }
+    }
+}
 
 @mixin circle-wave($height, $percentage) {
     @if $percentage > 0 and $percentage < 100 {
@@ -46,19 +84,21 @@ $color-dark: #1a1a1a;
             @include keyframes($text-anim-name) {
                 from {
                     color: #ff0000;
+                    text-shadow: 0 0 3px #ff0000;
                 }
                 to {
                     @if $percentage > 40 {
                         color: $main-color-for-text;
+                        text-shadow: 0 0 3px $main-color-for-text;
                     } @else {
                         color: $main-color;
+                        text-shadow: 0 0 3px $main-color;
                     }
                 }
             }
 
             animation: unquote($text-anim-name) math.div($percentage, 40) * 1s ease-out forwards 1;
 
-            text-shadow: 0 0 3px;
             display: flex;
             justify-content: center;
             align-items: center;

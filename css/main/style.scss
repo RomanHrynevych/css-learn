@@ -1,4 +1,3 @@
-@use "sass:math";
 @import "../circle/circle";
 
 * {
@@ -6,91 +5,40 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --color-dark: #fff;
+        --color-dark-invert: #1a1a1a;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-dark: #1a1a1a;
+        --color-dark-invert: #fff;
+    }
+}
+
 ul {
     list-style: none;
 }
 
-$small: 300px;
-$medium: 880px;
-.container {
-    width: 100%;
-    font-family: "Poppins", sans-serif;
-    &.dark {
-        background: #1a1a1a;
-    }
-    &.light {
-        background: #fff;
-    }
-    .cont {
-        width: 82%;
-        margin: 0 auto;
-        height: 100vh;
-        padding-top: 2rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .title {
-            color: rgb(238, 238, 238);
-            font-size: 2rem;
-            font-weight: 700;
-            text-align: center;
-            margin-bottom: 75px;
-            @media screen and (max-width: $medium) {
-                margin-bottom: 2rem;
-            }
-        }
-        .circle-anim-ul {
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
-            @media screen and (max-width: $medium) {
-                flex-direction: column;
-                li {
-                    margin-bottom: 20px;
-                }
-            }
-
-            li {
-                color: $red;
-                border: solid 2px $red;
-                border-radius: 50%;
-                width: $li-height;
-                box-shadow: 0 0 5px $red;
-
-                span {
-                    width: 100%;
-                    height: $li-height;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    border: solid 3px $color-dark;
-                    border-radius: 50%;
-                    position: relative;
-                    overflow: hidden;
-
-                    font-size: 1.8rem;
-                    z-index: 2;
-                }
-            }
-        }
-    }
-}
-
-.test {
+.text {
     height: 100vh;
-    color: #fff;
+    color: var(--color-dark-invert);
     font-size: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 .footer {
     height: 100vh;
-    color: #fff;
+    color: var(--color-dark-invert);
     font-size: 4rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
