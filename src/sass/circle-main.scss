@@ -1,5 +1,5 @@
 @use "sass:math";
-@import "../circle/circle";
+@import "circle";
 li.circle-anim-li:first-child {
     @include circle-wave($li-height, 14);
 }

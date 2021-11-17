@@ -19,7 +19,7 @@ const callbackSectionFade = function (entries, observer) {
 
   link.type = "text/css";
 
-  link.href = "css/circle-main/circle-main.css";
+  link.href = "src/css/circle-main.css";
 
   head.appendChild(link);
 
