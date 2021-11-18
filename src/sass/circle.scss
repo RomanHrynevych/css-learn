@@ -22,7 +22,7 @@
             }
             to {
                 border: solid 2px $main-color;
-                box-shadow: 0 0 ($percentage / 15) + 5px $main-color;
+                box-shadow: 0 0 ($percentage / 30) + 5px $main-color;
             }
         }
 
@@ -111,9 +111,11 @@
         @include keyframes($border-anim-name) {
             from {
                 box-shadow: 0 0 5px $red;
+                border: solid 1.5px $red;
             }
             to {
-                box-shadow: 0 0 ($percentage / 15) + 5px $main-color;
+                box-shadow: 0 0 ($percentage / 30) + 5px $main-color;
+                border: solid 1.5px $main-color;
             }
         }
 
@@ -135,23 +137,16 @@
         }
 
         .pie {
-            width: $li-height;
-            height: $li-height;
-
-            position: absolute;
-            left: 0;
-            top: 0;
             .half-circle {
                 height: 100%;
                 width: 100%;
-                border: math.div($li-height, 50) solid;
+                border: math.div($li-height, 40) solid;
                 clip: rect(0, $li-height / 2, $li-height, 0);
                 border-radius: 50%;
                 position: absolute;
                 left: 0;
                 top: 0;
             }
-
             @if $percentage <= 50 {
                 clip: rect(0, $li-height, $li-height, $li-height / 2);
                 .left-side {

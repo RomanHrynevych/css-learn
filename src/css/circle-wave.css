@@ -27,7 +27,7 @@ li.circle-anim-li.wave:first-child {
   }
   to {
     border: solid 2px #fa2100;
-    box-shadow: 0 0 5.6666666667px #fa2100;
+    box-shadow: 0 0 5.3333333333px #fa2100;
   }
 }
 @keyframes border-anim10 {
@@ -37,7 +37,7 @@ li.circle-anim-li.wave:first-child {
   }
   to {
     border: solid 2px #fa2100;
-    box-shadow: 0 0 5.6666666667px #fa2100;
+    box-shadow: 0 0 5.3333333333px #fa2100;
   }
 }
 li.circle-anim-li.wave:first-child span {
@@ -82,7 +82,7 @@ li.circle-anim-li.wave:first-child span::after {
   position: absolute;
   z-index: -1;
   left: -75%;
-  border-radius: 45%;
+  border-radius: 42%;
   -webkit-animation: rotate360 11.25s linear forwards infinite, color-anim10 0.25s ease-out forwards 1;
           animation: rotate360 11.25s linear forwards infinite, color-anim10 0.25s ease-out forwards 1;
 }
@@ -124,7 +124,7 @@ li.circle-anim-li.wave:nth-child(2) {
   }
   to {
     border: solid 2px #fa7d00;
-    box-shadow: 0 0 6.8px #fa7d00;
+    box-shadow: 0 0 5.9px #fa7d00;
   }
 }
 @keyframes border-anim27 {
@@ -134,7 +134,7 @@ li.circle-anim-li.wave:nth-child(2) {
   }
   to {
     border: solid 2px #fa7d00;
-    box-shadow: 0 0 6.8px #fa7d00;
+    box-shadow: 0 0 5.9px #fa7d00;
   }
 }
 li.circle-anim-li.wave:nth-child(2) span {
@@ -221,7 +221,7 @@ li.circle-anim-li.wave:nth-child(3) {
   }
   to {
     border: solid 2px #fafa00;
-    box-shadow: 0 0 9.0666666667px #fafa00;
+    box-shadow: 0 0 7.0333333333px #fafa00;
   }
 }
 @keyframes border-anim61 {
@@ -231,7 +231,7 @@ li.circle-anim-li.wave:nth-child(3) {
   }
   to {
     border: solid 2px #fafa00;
-    box-shadow: 0 0 9.0666666667px #fafa00;
+    box-shadow: 0 0 7.0333333333px #fafa00;
   }
 }
 li.circle-anim-li.wave:nth-child(3) span {
@@ -276,7 +276,7 @@ li.circle-anim-li.wave:nth-child(3) span::after {
   position: absolute;
   z-index: -1;
   left: -75%;
-  border-radius: 44%;
+  border-radius: 43%;
   -webkit-animation: rotate360 17.625s linear forwards infinite, color-anim61 1.525s ease-out forwards 1;
           animation: rotate360 17.625s linear forwards infinite, color-anim61 1.525s ease-out forwards 1;
 }
@@ -318,7 +318,7 @@ li.circle-anim-li.wave:last-child {
   }
   to {
     border: solid 2px #7dfa00;
-    box-shadow: 0 0 10.4666666667px #7dfa00;
+    box-shadow: 0 0 7.7333333333px #7dfa00;
   }
 }
 @keyframes border-anim82 {
@@ -328,7 +328,7 @@ li.circle-anim-li.wave:last-child {
   }
   to {
     border: solid 2px #7dfa00;
-    box-shadow: 0 0 10.4666666667px #7dfa00;
+    box-shadow: 0 0 7.7333333333px #7dfa00;
   }
 }
 li.circle-anim-li.wave:last-child span {
@@ -373,7 +373,7 @@ li.circle-anim-li.wave:last-child span::after {
   position: absolute;
   z-index: -1;
   left: -75%;
-  border-radius: 43%;
+  border-radius: 42%;
   -webkit-animation: rotate360 20.25s linear forwards infinite, color-anim82 2.05s ease-out forwards 1;
           animation: rotate360 20.25s linear forwards infinite, color-anim82 2.05s ease-out forwards 1;
 }
