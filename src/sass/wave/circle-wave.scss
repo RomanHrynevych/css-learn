@@ -1,14 +1,13 @@
-@use "sass:math";
-@import "circle";
-li.circle-anim-li:first-child {
+@import "../circle";
+li.circle-anim-li.wave:first-child {
     @include circle-wave($li-height, 14);
 }
-li.circle-anim-li:nth-child(2) {
+li.circle-anim-li.wave:nth-child(2) {
     @include circle-wave($li-height, 27);
 }
-li.circle-anim-li:nth-child(3) {
+li.circle-anim-li.wave:nth-child(3) {
     @include circle-wave($li-height, 61);
 }
-li.circle-anim-li:last-child {
+li.circle-anim-li.wave:last-child {
     @include circle-wave($li-height, 82);
 }

@@ -1,44 +1,5 @@
+@use "sass:math";
 @import "circle-param";
-body {
-    width: 100%;
-    font-family: "Poppins", sans-serif;
-    background: var(--color-dark);
-    .circle-anim-ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        @media screen and (max-width: $medium) {
-            flex-direction: column;
-            li {
-                margin-bottom: 20px;
-            }
-        }
-
-        li.circle-anim-li {
-            color: $red;
-            border: solid 2px $red;
-            border-radius: 50%;
-            width: $li-height;
-            box-shadow: 0 0 5px $red;
-
-            span {
-                width: 100%;
-                height: $li-height;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border: solid 3px var(--color-dark);
-                border-radius: 50%;
-                position: relative;
-                overflow: hidden;
-
-                font-size: 1.8rem;
-                z-index: 2;
-            }
-        }
-    }
-}
 
 @mixin circle-wave($height, $percentage) {
     @if $percentage > 0 and $percentage < 100 {
@@ -130,6 +91,118 @@ body {
     }
 }
 
+@mixin circle-progress($height, $percentage) {
+    @if $percentage > 0 and $percentage < 100 {
+        $main-color: color-picker($percentage);
+        $main-color-for-text: color-picker-for-text($percentage);
+        $color-dark: #1a1a1a;
+
+        $color-anim-name: quote(color-anim-prog + $percentage);
+        $border-anim-name: quote(border-anim-prog + $percentage);
+        $text-anim-name: quote(text-anim-prog + $percentage);
+        $left-circle-anim-name: quote(left-circle-anim-prog + $percentage);
+        $right-circle-anim-name: quote(right-circle-anim-prog + $percentage);
+        $pie-anim-name: quote(pie-anim-name + $percentage);
+
+        $anim-time: math.div($percentage, 100) * 2s;
+
+        position: relative;
+
+        @include keyframes($border-anim-name) {
+            from {
+                box-shadow: 0 0 5px #ff0000;
+            }
+            to {
+                box-shadow: 0 0 5px $main-color;
+            }
+        }
+
+        animation: unquote($border-anim-name) $anim-time linear forwards;
+        .pie {
+            width: $li-height;
+            height: $li-height;
+
+            position: absolute;
+            left: 0;
+            top: 0;
+            .half-circle {
+                height: 100%;
+                width: 100%;
+                border: math.div($li-height, 50) solid;
+                clip: rect(0, $li-height / 2, $li-height, 0);
+                border-radius: 50%;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+
+            @if $percentage <= 50 {
+                clip: rect(0, $li-height, $li-height, $li-height / 2);
+                .left-side {
+                    @include keyframes($left-circle-anim-name) {
+                        from {
+                            transform: rotate(0);
+                        }
+                        to {
+                            transform: rotate($percentage * 3.6deg);
+                        }
+                    }
+
+                    animation: unquote($left-circle-anim-name) $anim-time linear forwards;
+                }
+                .right-side {
+                    display: none;
+                }
+            } @else {
+                // clip: rect(0, $li-height, $li-height, $li-height / 2);
+                @include keyframes($pie-anim-name) {
+                    0% {
+                        clip: rect(0, $li-height, $li-height, $li-height / 2);
+                    }
+                    99% {
+                        clip: rect(0, $li-height, $li-height, $li-height / 2);
+                    }
+                    100% {
+                        clip: rect(auto, auto, auto, auto);
+                    }
+                }
+
+                animation: unquote($pie-anim-name) 1s linear forwards;
+                .left-side {
+                    @include keyframes($left-circle-anim-name) {
+                        from {
+                            transform: rotate(0);
+                        }
+                        to {
+                            transform: rotate(50 * 3.6deg);
+                        }
+                    }
+
+                    animation: unquote($left-circle-anim-name) 1s linear forwards;
+                }
+
+                .right-side {
+                    // background: #fdcc05;
+                    transform: rotate(-180deg);
+                    visibility: hidden;
+                    @include keyframes($right-circle-anim-name) {
+                        from {
+                            transform: rotate(-180deg);
+                            visibility: visible;
+                        }
+                        to {
+                            transform: rotate(-180deg + ($percentage - 50) * 3.6deg);
+                            visibility: visible;
+                        }
+                    }
+
+                    animation: unquote($right-circle-anim-name) math.div($percentage - 50, 100) * 2s linear 1s forwards;
+                }
+            }
+        }
+    }
+}
+
 @keyframes rotate360 {
     from {
         transform: rotate(0);
@@ -145,8 +218,12 @@ body {
     }
 }
 
-@mixin animate($animation, $duration, $method, $times) {
-    animation: $animation $duration $method $times;
+// @mixin animate($animation, $duration, $method, $times) {
+//     animation: $animation $duration $method $times;
+// }
+
+@mixin animate($animation, $duration, $method, $delay, $times) {
+    animation: $animation $duration $method $delay $times;
 }
 
 @function color-picker($percentage) {

@@ -1,0 +1,13 @@
+@import "../circle";
+li.circle-anim-li.progress:first-child {
+    @include circle-progress($li-height, 14);
+}
+li.circle-anim-li.progress:nth-child(2) {
+    @include circle-progress($li-height, 27);
+}
+li.circle-anim-li.progress:nth-child(3) {
+    @include circle-progress($li-height, 61);
+}
+li.circle-anim-li.progress:last-child {
+    @include circle-progress($li-height, 82);
+}

@@ -1,43 +1,3 @@
-body {
-  width: 100%;
-  font-family: "Poppins", sans-serif;
-  background: var(--color-dark);
-}
-body .circle-anim-ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-}
-@media screen and (max-width: 1036px) {
-  body .circle-anim-ul {
-    flex-direction: column;
-  }
-  body .circle-anim-ul li {
-    margin-bottom: 20px;
-  }
-}
-body .circle-anim-ul li.circle-anim-li {
-  color: #ff0000;
-  border: solid 2px #ff0000;
-  border-radius: 50%;
-  width: 12rem;
-  box-shadow: 0 0 5px #ff0000;
-}
-body .circle-anim-ul li.circle-anim-li span {
-  width: 100%;
-  height: 12rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: solid 3px var(--color-dark);
-  border-radius: 50%;
-  position: relative;
-  overflow: hidden;
-  font-size: 1.8rem;
-  z-index: 2;
-}
-
 @-webkit-keyframes rotate360 {
   from {
     transform: rotate(0);
@@ -46,7 +6,6 @@ body .circle-anim-ul li.circle-anim-li span {
     transform: rotate(360deg);
   }
 }
-
 @keyframes rotate360 {
   from {
     transform: rotate(0);
@@ -55,7 +14,7 @@ body .circle-anim-ul li.circle-anim-li span {
     transform: rotate(360deg);
   }
 }
-li.circle-anim-li:first-child {
+li.circle-anim-li.wave:first-child {
   width: 12rem;
   -webkit-animation: border-anim14 0.35s ease-out forwards 1;
           animation: border-anim14 0.35s ease-out forwards 1;
@@ -81,7 +40,7 @@ li.circle-anim-li:first-child {
     box-shadow: 0 0 5px #fa3600;
   }
 }
-li.circle-anim-li:first-child span {
+li.circle-anim-li.wave:first-child span {
   width: 100%;
   height: 12rem;
   border-radius: 50%;
@@ -116,14 +75,14 @@ li.circle-anim-li:first-child span {
     text-shadow: 0 0 3px #fa3600;
   }
 }
-li.circle-anim-li:first-child span::after {
+li.circle-anim-li.wave:first-child span::after {
   content: "";
   height: 250%;
   width: 250%;
   position: absolute;
   z-index: -1;
   left: -75%;
-  border-radius: 45%;
+  border-radius: 46%;
   -webkit-animation: rotate360 11.75s linear forwards infinite, color-anim14 0.35s ease-out forwards 1;
           animation: rotate360 11.75s linear forwards infinite, color-anim14 0.35s ease-out forwards 1;
 }
@@ -152,7 +111,7 @@ li.circle-anim-li:first-child span::after {
   }
 }
 
-li.circle-anim-li:nth-child(2) {
+li.circle-anim-li.wave:nth-child(2) {
   width: 12rem;
   -webkit-animation: border-anim27 0.675s ease-out forwards 1;
           animation: border-anim27 0.675s ease-out forwards 1;
@@ -178,7 +137,7 @@ li.circle-anim-li:nth-child(2) {
     box-shadow: 0 0 5px #fa7d00;
   }
 }
-li.circle-anim-li:nth-child(2) span {
+li.circle-anim-li.wave:nth-child(2) span {
   width: 100%;
   height: 12rem;
   border-radius: 50%;
@@ -213,7 +172,7 @@ li.circle-anim-li:nth-child(2) span {
     text-shadow: 0 0 3px #fa7d00;
   }
 }
-li.circle-anim-li:nth-child(2) span::after {
+li.circle-anim-li.wave:nth-child(2) span::after {
   content: "";
   height: 250%;
   width: 250%;
@@ -249,7 +208,7 @@ li.circle-anim-li:nth-child(2) span::after {
   }
 }
 
-li.circle-anim-li:nth-child(3) {
+li.circle-anim-li.wave:nth-child(3) {
   width: 12rem;
   -webkit-animation: border-anim61 1.525s ease-out forwards 1;
           animation: border-anim61 1.525s ease-out forwards 1;
@@ -275,7 +234,7 @@ li.circle-anim-li:nth-child(3) {
     box-shadow: 0 0 5px #fafa00;
   }
 }
-li.circle-anim-li:nth-child(3) span {
+li.circle-anim-li.wave:nth-child(3) span {
   width: 100%;
   height: 12rem;
   border-radius: 50%;
@@ -310,14 +269,14 @@ li.circle-anim-li:nth-child(3) span {
     text-shadow: 0 0 3px #e4b900;
   }
 }
-li.circle-anim-li:nth-child(3) span::after {
+li.circle-anim-li.wave:nth-child(3) span::after {
   content: "";
   height: 250%;
   width: 250%;
   position: absolute;
   z-index: -1;
   left: -75%;
-  border-radius: 46%;
+  border-radius: 43%;
   -webkit-animation: rotate360 17.625s linear forwards infinite, color-anim61 1.525s ease-out forwards 1;
           animation: rotate360 17.625s linear forwards infinite, color-anim61 1.525s ease-out forwards 1;
 }
@@ -346,7 +305,7 @@ li.circle-anim-li:nth-child(3) span::after {
   }
 }
 
-li.circle-anim-li:last-child {
+li.circle-anim-li.wave:last-child {
   width: 12rem;
   -webkit-animation: border-anim82 2.05s ease-out forwards 1;
           animation: border-anim82 2.05s ease-out forwards 1;
@@ -372,7 +331,7 @@ li.circle-anim-li:last-child {
     box-shadow: 0 0 5px #7dfa00;
   }
 }
-li.circle-anim-li:last-child span {
+li.circle-anim-li.wave:last-child span {
   width: 100%;
   height: 12rem;
   border-radius: 50%;
@@ -407,7 +366,7 @@ li.circle-anim-li:last-child span {
     text-shadow: 0 0 3px #44b900;
   }
 }
-li.circle-anim-li:last-child span::after {
+li.circle-anim-li.wave:last-child span::after {
   content: "";
   height: 250%;
   width: 250%;
