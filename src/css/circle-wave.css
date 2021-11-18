@@ -16,28 +16,28 @@
 }
 li.circle-anim-li.wave:first-child {
   width: 12rem;
-  -webkit-animation: border-anim14 0.35s ease-out forwards 1;
-          animation: border-anim14 0.35s ease-out forwards 1;
+  -webkit-animation: border-anim10 0.25s ease-out forwards 1;
+          animation: border-anim10 0.25s ease-out forwards 1;
   border-radius: 50%;
 }
-@-webkit-keyframes border-anim14 {
+@-webkit-keyframes border-anim10 {
   from {
     border: solid 2px #ff0000;
     box-shadow: 0 0 5px #ff0000;
   }
   to {
-    border: solid 2px #fa3600;
-    box-shadow: 0 0 5px #fa3600;
+    border: solid 2px #fa2100;
+    box-shadow: 0 0 5.6666666667px #fa2100;
   }
 }
-@keyframes border-anim14 {
+@keyframes border-anim10 {
   from {
     border: solid 2px #ff0000;
     box-shadow: 0 0 5px #ff0000;
   }
   to {
-    border: solid 2px #fa3600;
-    box-shadow: 0 0 5px #fa3600;
+    border: solid 2px #fa2100;
+    box-shadow: 0 0 5.6666666667px #fa2100;
   }
 }
 li.circle-anim-li.wave:first-child span {
@@ -49,30 +49,30 @@ li.circle-anim-li.wave:first-child span {
   overflow: hidden;
   font-size: 1.8rem;
   z-index: 2;
-  -webkit-animation: text-anim14 0.35s ease-out forwards 1;
-          animation: text-anim14 0.35s ease-out forwards 1;
+  -webkit-animation: text-anim10 0.25s ease-out forwards 1;
+          animation: text-anim10 0.25s ease-out forwards 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-@-webkit-keyframes text-anim14 {
+@-webkit-keyframes text-anim10 {
   from {
     color: #ff0000;
     text-shadow: 0 0 3px #ff0000;
   }
   to {
-    color: #fa3600;
-    text-shadow: 0 0 3px #fa3600;
+    color: #fa2100;
+    text-shadow: 0 0 3px #fa2100;
   }
 }
-@keyframes text-anim14 {
+@keyframes text-anim10 {
   from {
     color: #ff0000;
     text-shadow: 0 0 3px #ff0000;
   }
   to {
-    color: #fa3600;
-    text-shadow: 0 0 3px #fa3600;
+    color: #fa2100;
+    text-shadow: 0 0 3px #fa2100;
   }
 }
 li.circle-anim-li.wave:first-child span::after {
@@ -82,32 +82,32 @@ li.circle-anim-li.wave:first-child span::after {
   position: absolute;
   z-index: -1;
   left: -75%;
-  border-radius: 46%;
-  -webkit-animation: rotate360 11.75s linear forwards infinite, color-anim14 0.35s ease-out forwards 1;
-          animation: rotate360 11.75s linear forwards infinite, color-anim14 0.35s ease-out forwards 1;
+  border-radius: 45%;
+  -webkit-animation: rotate360 11.25s linear forwards infinite, color-anim10 0.25s ease-out forwards 1;
+          animation: rotate360 11.25s linear forwards infinite, color-anim10 0.25s ease-out forwards 1;
 }
-@-webkit-keyframes color-anim14 {
+@-webkit-keyframes color-anim10 {
   from {
     background: #ff0000;
     top: 100%;
     box-shadow: 0 0 20px #ff0000;
   }
   to {
-    background: #fa3600;
-    top: 86%;
-    box-shadow: 0 0 20px #fa3600;
+    background: #fa2100;
+    top: 90%;
+    box-shadow: 0 0 20px #fa2100;
   }
 }
-@keyframes color-anim14 {
+@keyframes color-anim10 {
   from {
     background: #ff0000;
     top: 100%;
     box-shadow: 0 0 20px #ff0000;
   }
   to {
-    background: #fa3600;
-    top: 86%;
-    box-shadow: 0 0 20px #fa3600;
+    background: #fa2100;
+    top: 90%;
+    box-shadow: 0 0 20px #fa2100;
   }
 }
 
@@ -124,7 +124,7 @@ li.circle-anim-li.wave:nth-child(2) {
   }
   to {
     border: solid 2px #fa7d00;
-    box-shadow: 0 0 5px #fa7d00;
+    box-shadow: 0 0 6.8px #fa7d00;
   }
 }
 @keyframes border-anim27 {
@@ -134,7 +134,7 @@ li.circle-anim-li.wave:nth-child(2) {
   }
   to {
     border: solid 2px #fa7d00;
-    box-shadow: 0 0 5px #fa7d00;
+    box-shadow: 0 0 6.8px #fa7d00;
   }
 }
 li.circle-anim-li.wave:nth-child(2) span {
@@ -179,7 +179,7 @@ li.circle-anim-li.wave:nth-child(2) span::after {
   position: absolute;
   z-index: -1;
   left: -75%;
-  border-radius: 44%;
+  border-radius: 45%;
   -webkit-animation: rotate360 13.375s linear forwards infinite, color-anim27 0.675s ease-out forwards 1;
           animation: rotate360 13.375s linear forwards infinite, color-anim27 0.675s ease-out forwards 1;
 }
@@ -221,7 +221,7 @@ li.circle-anim-li.wave:nth-child(3) {
   }
   to {
     border: solid 2px #fafa00;
-    box-shadow: 0 0 5px #fafa00;
+    box-shadow: 0 0 9.0666666667px #fafa00;
   }
 }
 @keyframes border-anim61 {
@@ -231,7 +231,7 @@ li.circle-anim-li.wave:nth-child(3) {
   }
   to {
     border: solid 2px #fafa00;
-    box-shadow: 0 0 5px #fafa00;
+    box-shadow: 0 0 9.0666666667px #fafa00;
   }
 }
 li.circle-anim-li.wave:nth-child(3) span {
@@ -276,7 +276,7 @@ li.circle-anim-li.wave:nth-child(3) span::after {
   position: absolute;
   z-index: -1;
   left: -75%;
-  border-radius: 43%;
+  border-radius: 44%;
   -webkit-animation: rotate360 17.625s linear forwards infinite, color-anim61 1.525s ease-out forwards 1;
           animation: rotate360 17.625s linear forwards infinite, color-anim61 1.525s ease-out forwards 1;
 }
@@ -318,7 +318,7 @@ li.circle-anim-li.wave:last-child {
   }
   to {
     border: solid 2px #7dfa00;
-    box-shadow: 0 0 5px #7dfa00;
+    box-shadow: 0 0 10.4666666667px #7dfa00;
   }
 }
 @keyframes border-anim82 {
@@ -328,7 +328,7 @@ li.circle-anim-li.wave:last-child {
   }
   to {
     border: solid 2px #7dfa00;
-    box-shadow: 0 0 5px #7dfa00;
+    box-shadow: 0 0 10.4666666667px #7dfa00;
   }
 }
 li.circle-anim-li.wave:last-child span {

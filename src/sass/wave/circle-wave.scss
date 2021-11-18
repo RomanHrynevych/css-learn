@@ -1,6 +1,6 @@
 @import "../circle";
 li.circle-anim-li.wave:first-child {
-    @include circle-wave($li-height, 14);
+    @include circle-wave($li-height, 10);
 }
 li.circle-anim-li.wave:nth-child(2) {
     @include circle-wave($li-height, 27);

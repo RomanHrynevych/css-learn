@@ -11,38 +11,40 @@ function animateValue(obj, start, end, duration) {
   };
   window.requestAnimationFrame(step);
 }
-const animationBlock = document.querySelector(`.circle-anim-ul`);
+
+const animationBlock = document.querySelectorAll(`.circle-anim-ul`);
 
 const optionsSectionFade = {
   root: null,
-  threshold: 0.5,
+  threshold: 0.01,
 };
 
 const callbackSectionFade = function (entries, observer) {
-  const [entry] = entries;
+  entries.forEach(function (entry) {
+    if (!entry.isIntersecting) return;
+    const type = entry.target.classList[1];
 
-  if (!entry.isIntersecting) return;
+    let head = document.getElementsByTagName("HEAD")[0];
+    let link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.type = "text/css";
+    link.href = `src/css/circle-${type}.css`;
+    head.appendChild(link);
 
-  let head = document.getElementsByTagName("HEAD")[0];
+    const circleArr = document.querySelector(`.circle-anim-ul.${type}`);
+    new Array(...circleArr.children).forEach((li, i) => {
+      const percentage = +li.getAttribute("circle-perc");
+      let duration;
+      if (type === `wave`) {
+        duration = (percentage / 50) * 1000;
+      } else if (type === "progress") {
+        duration = percentage * 1.5 * 10;
+      }
+      animateValue(li.children[0], 0, percentage, duration);
+    });
 
-  let link = document.createElement("link");
-
-  link.rel = "stylesheet";
-
-  link.type = "text/css";
-
-  link.href = "src/css/circle-wave.css";
-
-  head.appendChild(link);
-
-  const circleArr = document.querySelector(`.circle-anim-ul`);
-
-  new Array(...circleArr.children).forEach((li, i) => {
-    const percentage = +li.getAttribute("circle-perc");
-    animateValue(li.children[0], 0, percentage, (percentage / 50) * 1000);
+    observerSectionFade.unobserve(entry.target);
   });
-
-  observerSectionFade.unobserve(animationBlock);
 };
 
 const observerSectionFade = new IntersectionObserver(
@@ -50,4 +52,6 @@ const observerSectionFade = new IntersectionObserver(
   optionsSectionFade
 );
 
-observerSectionFade.observe(animationBlock);
+animationBlock.forEach(function (elem) {
+  observerSectionFade.observe(elem);
+});

@@ -1,0 +1,495 @@
+@-webkit-keyframes rotate360 {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate360 {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+li.circle-anim-li.progress:first-child {
+  position: relative;
+  -webkit-animation: border-anim-prog14 0.21s linear forwards;
+          animation: border-anim-prog14 0.21s linear forwards;
+}
+@-webkit-keyframes border-anim-prog14 {
+  from {
+    box-shadow: 0 0 5px #ff0000;
+  }
+  to {
+    box-shadow: 0 0 5.9333333333px #fa3600;
+  }
+}
+@keyframes border-anim-prog14 {
+  from {
+    box-shadow: 0 0 5px #ff0000;
+  }
+  to {
+    box-shadow: 0 0 5.9333333333px #fa3600;
+  }
+}
+li.circle-anim-li.progress:first-child span {
+  -webkit-animation: text-anim-prog14 0.21s linear forwards;
+          animation: text-anim-prog14 0.21s linear forwards;
+}
+@-webkit-keyframes text-anim-prog14 {
+  from {
+    text-shadow: 0 0 1px #ff0000;
+    color: #ff0000;
+  }
+  to {
+    text-shadow: 0 0 3px #fa3600;
+    color: #fa3600;
+  }
+}
+@keyframes text-anim-prog14 {
+  from {
+    text-shadow: 0 0 1px #ff0000;
+    color: #ff0000;
+  }
+  to {
+    text-shadow: 0 0 3px #fa3600;
+    color: #fa3600;
+  }
+}
+li.circle-anim-li.progress:first-child .pie {
+  width: 12rem;
+  height: 12rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  clip: rect(0, 12rem, 12rem, 6rem);
+}
+li.circle-anim-li.progress:first-child .pie .half-circle {
+  height: 100%;
+  width: 100%;
+  border: 0.24rem solid;
+  clip: rect(0, 6rem, 12rem, 0);
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+li.circle-anim-li.progress:first-child .pie .left-side {
+  -webkit-animation: left-circle-anim-prog14 0.21s linear forwards;
+          animation: left-circle-anim-prog14 0.21s linear forwards;
+}
+@-webkit-keyframes left-circle-anim-prog14 {
+  from {
+    transform: rotate(0);
+    border-color: #ff0000;
+  }
+  to {
+    transform: rotate(50.4deg);
+    border-color: #fa3600;
+  }
+}
+@keyframes left-circle-anim-prog14 {
+  from {
+    transform: rotate(0);
+    border-color: #ff0000;
+  }
+  to {
+    transform: rotate(50.4deg);
+    border-color: #fa3600;
+  }
+}
+li.circle-anim-li.progress:first-child .pie .right-side {
+  display: none;
+}
+
+li.circle-anim-li.progress:nth-child(2) {
+  position: relative;
+  -webkit-animation: border-anim-prog32 0.48s linear forwards;
+          animation: border-anim-prog32 0.48s linear forwards;
+}
+@-webkit-keyframes border-anim-prog32 {
+  from {
+    box-shadow: 0 0 5px #ff0000;
+  }
+  to {
+    box-shadow: 0 0 7.1333333333px #fa9800;
+  }
+}
+@keyframes border-anim-prog32 {
+  from {
+    box-shadow: 0 0 5px #ff0000;
+  }
+  to {
+    box-shadow: 0 0 7.1333333333px #fa9800;
+  }
+}
+li.circle-anim-li.progress:nth-child(2) span {
+  -webkit-animation: text-anim-prog32 0.48s linear forwards;
+          animation: text-anim-prog32 0.48s linear forwards;
+}
+@-webkit-keyframes text-anim-prog32 {
+  from {
+    text-shadow: 0 0 1px #ff0000;
+    color: #ff0000;
+  }
+  to {
+    text-shadow: 0 0 3px #fa9800;
+    color: #fa9800;
+  }
+}
+@keyframes text-anim-prog32 {
+  from {
+    text-shadow: 0 0 1px #ff0000;
+    color: #ff0000;
+  }
+  to {
+    text-shadow: 0 0 3px #fa9800;
+    color: #fa9800;
+  }
+}
+li.circle-anim-li.progress:nth-child(2) .pie {
+  width: 12rem;
+  height: 12rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  clip: rect(0, 12rem, 12rem, 6rem);
+}
+li.circle-anim-li.progress:nth-child(2) .pie .half-circle {
+  height: 100%;
+  width: 100%;
+  border: 0.24rem solid;
+  clip: rect(0, 6rem, 12rem, 0);
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+li.circle-anim-li.progress:nth-child(2) .pie .left-side {
+  -webkit-animation: left-circle-anim-prog32 0.48s linear forwards;
+          animation: left-circle-anim-prog32 0.48s linear forwards;
+}
+@-webkit-keyframes left-circle-anim-prog32 {
+  from {
+    transform: rotate(0);
+    border-color: #ff0000;
+  }
+  to {
+    transform: rotate(115.2deg);
+    border-color: #fa9800;
+  }
+}
+@keyframes left-circle-anim-prog32 {
+  from {
+    transform: rotate(0);
+    border-color: #ff0000;
+  }
+  to {
+    transform: rotate(115.2deg);
+    border-color: #fa9800;
+  }
+}
+li.circle-anim-li.progress:nth-child(2) .pie .right-side {
+  display: none;
+}
+
+li.circle-anim-li.progress:nth-child(3) {
+  position: relative;
+  -webkit-animation: border-anim-prog72 1.08s linear forwards;
+          animation: border-anim-prog72 1.08s linear forwards;
+}
+@-webkit-keyframes border-anim-prog72 {
+  from {
+    box-shadow: 0 0 5px #ff0000;
+  }
+  to {
+    box-shadow: 0 0 9.8px #cefa00;
+  }
+}
+@keyframes border-anim-prog72 {
+  from {
+    box-shadow: 0 0 5px #ff0000;
+  }
+  to {
+    box-shadow: 0 0 9.8px #cefa00;
+  }
+}
+li.circle-anim-li.progress:nth-child(3) span {
+  -webkit-animation: text-anim-prog72 1.08s linear forwards;
+          animation: text-anim-prog72 1.08s linear forwards;
+}
+@-webkit-keyframes text-anim-prog72 {
+  from {
+    text-shadow: 0 0 1px #ff0000;
+    color: #ff0000;
+  }
+  to {
+    text-shadow: 0 0 3px #cefa00;
+    color: #cefa00;
+  }
+}
+@keyframes text-anim-prog72 {
+  from {
+    text-shadow: 0 0 1px #ff0000;
+    color: #ff0000;
+  }
+  to {
+    text-shadow: 0 0 3px #cefa00;
+    color: #cefa00;
+  }
+}
+li.circle-anim-li.progress:nth-child(3) .pie {
+  width: 12rem;
+  height: 12rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-animation: pie-anim-name72 0.75s linear forwards;
+          animation: pie-anim-name72 0.75s linear forwards;
+}
+li.circle-anim-li.progress:nth-child(3) .pie .half-circle {
+  height: 100%;
+  width: 100%;
+  border: 0.24rem solid;
+  clip: rect(0, 6rem, 12rem, 0);
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+@-webkit-keyframes pie-anim-name72 {
+  0% {
+    clip: rect(0, 12rem, 12rem, 6rem);
+  }
+  99% {
+    clip: rect(0, 12rem, 12rem, 6rem);
+  }
+  100% {
+    clip: rect(auto, auto, auto, auto);
+  }
+}
+@keyframes pie-anim-name72 {
+  0% {
+    clip: rect(0, 12rem, 12rem, 6rem);
+  }
+  99% {
+    clip: rect(0, 12rem, 12rem, 6rem);
+  }
+  100% {
+    clip: rect(auto, auto, auto, auto);
+  }
+}
+li.circle-anim-li.progress:nth-child(3) .pie .left-side {
+  -webkit-animation: left-circle-anim-prog72 1.08s linear forwards;
+          animation: left-circle-anim-prog72 1.08s linear forwards;
+}
+@-webkit-keyframes left-circle-anim-prog72 {
+  0% {
+    transform: rotate(0);
+    border-color: #ff0000;
+  }
+  69.4444444444% {
+    transform: rotate(180deg);
+    border-color: #fafa00;
+  }
+  100% {
+    transform: rotate(180deg);
+    border-color: #cefa00;
+  }
+}
+@keyframes left-circle-anim-prog72 {
+  0% {
+    transform: rotate(0);
+    border-color: #ff0000;
+  }
+  69.4444444444% {
+    transform: rotate(180deg);
+    border-color: #fafa00;
+  }
+  100% {
+    transform: rotate(180deg);
+    border-color: #cefa00;
+  }
+}
+li.circle-anim-li.progress:nth-child(3) .pie .right-side {
+  transform: rotate(-180deg);
+  visibility: hidden;
+  -webkit-animation: right-circle-anim-prog72 0.44s linear 0.75s forwards;
+          animation: right-circle-anim-prog72 0.44s linear 0.75s forwards;
+}
+@-webkit-keyframes right-circle-anim-prog72 {
+  from {
+    transform: rotate(-180deg);
+    visibility: visible;
+    border-color: #fafa00;
+  }
+  to {
+    transform: rotate(-100.8deg);
+    visibility: visible;
+    border-color: #cefa00;
+  }
+}
+@keyframes right-circle-anim-prog72 {
+  from {
+    transform: rotate(-180deg);
+    visibility: visible;
+    border-color: #fafa00;
+  }
+  to {
+    transform: rotate(-100.8deg);
+    visibility: visible;
+    border-color: #cefa00;
+  }
+}
+
+li.circle-anim-li.progress:last-child {
+  position: relative;
+  -webkit-animation: border-anim-prog95 1.425s linear forwards;
+          animation: border-anim-prog95 1.425s linear forwards;
+}
+@-webkit-keyframes border-anim-prog95 {
+  from {
+    box-shadow: 0 0 5px #ff0000;
+  }
+  to {
+    box-shadow: 0 0 11.3333333333px #13fa00;
+  }
+}
+@keyframes border-anim-prog95 {
+  from {
+    box-shadow: 0 0 5px #ff0000;
+  }
+  to {
+    box-shadow: 0 0 11.3333333333px #13fa00;
+  }
+}
+li.circle-anim-li.progress:last-child span {
+  -webkit-animation: text-anim-prog95 1.425s linear forwards;
+          animation: text-anim-prog95 1.425s linear forwards;
+}
+@-webkit-keyframes text-anim-prog95 {
+  from {
+    text-shadow: 0 0 1px #ff0000;
+    color: #ff0000;
+  }
+  to {
+    text-shadow: 0 0 3px #13fa00;
+    color: #13fa00;
+  }
+}
+@keyframes text-anim-prog95 {
+  from {
+    text-shadow: 0 0 1px #ff0000;
+    color: #ff0000;
+  }
+  to {
+    text-shadow: 0 0 3px #13fa00;
+    color: #13fa00;
+  }
+}
+li.circle-anim-li.progress:last-child .pie {
+  width: 12rem;
+  height: 12rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-animation: pie-anim-name95 0.75s linear forwards;
+          animation: pie-anim-name95 0.75s linear forwards;
+}
+li.circle-anim-li.progress:last-child .pie .half-circle {
+  height: 100%;
+  width: 100%;
+  border: 0.24rem solid;
+  clip: rect(0, 6rem, 12rem, 0);
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+@-webkit-keyframes pie-anim-name95 {
+  0% {
+    clip: rect(0, 12rem, 12rem, 6rem);
+  }
+  99% {
+    clip: rect(0, 12rem, 12rem, 6rem);
+  }
+  100% {
+    clip: rect(auto, auto, auto, auto);
+  }
+}
+@keyframes pie-anim-name95 {
+  0% {
+    clip: rect(0, 12rem, 12rem, 6rem);
+  }
+  99% {
+    clip: rect(0, 12rem, 12rem, 6rem);
+  }
+  100% {
+    clip: rect(auto, auto, auto, auto);
+  }
+}
+li.circle-anim-li.progress:last-child .pie .left-side {
+  -webkit-animation: left-circle-anim-prog95 1.425s linear forwards;
+          animation: left-circle-anim-prog95 1.425s linear forwards;
+}
+@-webkit-keyframes left-circle-anim-prog95 {
+  0% {
+    transform: rotate(0);
+    border-color: #ff0000;
+  }
+  52.6315789474% {
+    transform: rotate(180deg);
+    border-color: #fafa00;
+  }
+  100% {
+    transform: rotate(180deg);
+    border-color: #13fa00;
+  }
+}
+@keyframes left-circle-anim-prog95 {
+  0% {
+    transform: rotate(0);
+    border-color: #ff0000;
+  }
+  52.6315789474% {
+    transform: rotate(180deg);
+    border-color: #fafa00;
+  }
+  100% {
+    transform: rotate(180deg);
+    border-color: #13fa00;
+  }
+}
+li.circle-anim-li.progress:last-child .pie .right-side {
+  transform: rotate(-180deg);
+  visibility: hidden;
+  -webkit-animation: right-circle-anim-prog95 0.9s linear 0.75s forwards;
+          animation: right-circle-anim-prog95 0.9s linear 0.75s forwards;
+}
+@-webkit-keyframes right-circle-anim-prog95 {
+  from {
+    transform: rotate(-180deg);
+    visibility: visible;
+    border-color: #fafa00;
+  }
+  to {
+    transform: rotate(-18deg);
+    visibility: visible;
+    border-color: #13fa00;
+  }
+}
+@keyframes right-circle-anim-prog95 {
+  from {
+    transform: rotate(-180deg);
+    visibility: visible;
+    border-color: #fafa00;
+  }
+  to {
+    transform: rotate(-18deg);
+    visibility: visible;
+    border-color: #13fa00;
+  }
+}

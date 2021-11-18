@@ -1,5 +1,6 @@
 @use "sass:math";
 @import "circle";
+// @import "wave/circle-wave";
 
 * {
     padding: 0;
@@ -67,6 +68,9 @@ body {
                 span {
                     border: solid 3px var(--color-dark);
                 }
+            }
+            &.progress {
+                box-shadow: 0 0 5px $red;
             }
         }
     }

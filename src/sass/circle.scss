@@ -17,12 +17,12 @@
 
         @include keyframes($border-anim-name) {
             from {
-                border: solid 2px #ff0000;
-                box-shadow: 0 0 5px #ff0000;
+                border: solid 2px $red;
+                box-shadow: 0 0 5px $red;
             }
             to {
                 border: solid 2px $main-color;
-                box-shadow: 0 0 5px $main-color;
+                box-shadow: 0 0 ($percentage / 15) + 5px $main-color;
             }
         }
 
@@ -44,8 +44,8 @@
 
             @include keyframes($text-anim-name) {
                 from {
-                    color: #ff0000;
-                    text-shadow: 0 0 3px #ff0000;
+                    color: $red;
+                    text-shadow: 0 0 3px $red;
                 }
                 to {
                     @if $percentage > 40 {
@@ -73,9 +73,9 @@
                 left: -75%;
                 @include keyframes($color-anim-name) {
                     from {
-                        background: #ff0000;
+                        background: $red;
                         top: 100%;
-                        box-shadow: 0 0 20px #ff0000;
+                        box-shadow: 0 0 20px $red;
                     }
                     to {
                         background: $main-color;
@@ -96,28 +96,44 @@
         $main-color: color-picker($percentage);
         $main-color-for-text: color-picker-for-text($percentage);
         $color-dark: #1a1a1a;
-
+        $animation-drip: 1.5s;
         $color-anim-name: quote(color-anim-prog + $percentage);
         $border-anim-name: quote(border-anim-prog + $percentage);
         $text-anim-name: quote(text-anim-prog + $percentage);
         $left-circle-anim-name: quote(left-circle-anim-prog + $percentage);
         $right-circle-anim-name: quote(right-circle-anim-prog + $percentage);
         $pie-anim-name: quote(pie-anim-name + $percentage);
+        $color-big-anim-name: quote(color-big-anim-name + $percentage);
 
-        $anim-time: math.div($percentage, 100) * 2s;
+        $anim-time: math.div($percentage, 100) * $animation-drip;
 
         position: relative;
-
         @include keyframes($border-anim-name) {
             from {
-                box-shadow: 0 0 5px #ff0000;
+                box-shadow: 0 0 5px $red;
             }
             to {
-                box-shadow: 0 0 5px $main-color;
+                box-shadow: 0 0 ($percentage / 15) + 5px $main-color;
             }
         }
 
         animation: unquote($border-anim-name) $anim-time linear forwards;
+
+        span {
+            @include keyframes($text-anim-name) {
+                from {
+                    text-shadow: 0 0 1px $red;
+                    color: $red;
+                }
+                to {
+                    text-shadow: 0 0 3px $main-color;
+                    color: $main-color;
+                }
+            }
+
+            animation: unquote($text-anim-name) $anim-time linear forwards;
+        }
+
         .pie {
             width: $li-height;
             height: $li-height;
@@ -142,9 +158,11 @@
                     @include keyframes($left-circle-anim-name) {
                         from {
                             transform: rotate(0);
+                            border-color: $red;
                         }
                         to {
                             transform: rotate($percentage * 3.6deg);
+                            border-color: $main-color;
                         }
                     }
 
@@ -154,7 +172,6 @@
                     display: none;
                 }
             } @else {
-                // clip: rect(0, $li-height, $li-height, $li-height / 2);
                 @include keyframes($pie-anim-name) {
                     0% {
                         clip: rect(0, $li-height, $li-height, $li-height / 2);
@@ -167,36 +184,48 @@
                     }
                 }
 
-                animation: unquote($pie-anim-name) 1s linear forwards;
+                animation: unquote($pie-anim-name) ($animation-drip / 2) linear forwards;
                 .left-side {
                     @include keyframes($left-circle-anim-name) {
-                        from {
+                        0% {
                             transform: rotate(0);
+                            border-color: $red;
                         }
-                        to {
+                        #{(5000 / $percentage) * 1%} {
                             transform: rotate(50 * 3.6deg);
+                            border-color: color-picker(50);
+                        }
+                        100% {
+                            transform: rotate(50 * 3.6deg);
+                            border-color: $main-color;
                         }
                     }
 
-                    animation: unquote($left-circle-anim-name) 1s linear forwards;
+                    animation: unquote($left-circle-anim-name) $anim-time linear forwards;
                 }
 
                 .right-side {
-                    // background: #fdcc05;
                     transform: rotate(-180deg);
                     visibility: hidden;
                     @include keyframes($right-circle-anim-name) {
                         from {
                             transform: rotate(-180deg);
                             visibility: visible;
+                            border-color: color-picker(50);
                         }
                         to {
                             transform: rotate(-180deg + ($percentage - 50) * 3.6deg);
                             visibility: visible;
+                            border-color: $main-color;
                         }
                     }
 
-                    animation: unquote($right-circle-anim-name) math.div($percentage - 50, 100) * 2s linear 1s forwards;
+                    animation: unquote($right-circle-anim-name)
+                        math.div($percentage - 50, 100) *
+                        2s
+                        linear
+                        ($animation-drip / 2)
+                        forwards;
                 }
             }
         }
@@ -217,10 +246,6 @@
         @content;
     }
 }
-
-// @mixin animate($animation, $duration, $method, $times) {
-//     animation: $animation $duration $method $times;
-// }
 
 @mixin animate($animation, $duration, $method, $delay, $times) {
     animation: $animation $duration $method $delay $times;

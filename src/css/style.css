@@ -79,6 +79,9 @@ body .circle-anim-ul li.circle-anim-li.wave {
 body .circle-anim-ul li.circle-anim-li.wave span {
   border: solid 3px var(--color-dark);
 }
+body .circle-anim-ul li.circle-anim-li.progress {
+  box-shadow: 0 0 5px #ff0000;
+}
 
 .text {
   height: 100vh;
