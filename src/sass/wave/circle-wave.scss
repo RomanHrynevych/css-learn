@@ -1,13 +1,13 @@
 @import "../circle";
-li.circle-anim-li.wave:first-child {
+li.circle-anim-li.wave.active:first-child {
     @include circle-wave($li-height, 10);
 }
-li.circle-anim-li.wave:nth-child(2) {
+li.circle-anim-li.wave.active:nth-child(2) {
     @include circle-wave($li-height, 27);
 }
-li.circle-anim-li.wave:nth-child(3) {
+li.circle-anim-li.wave.active:nth-child(3) {
     @include circle-wave($li-height, 61);
 }
-li.circle-anim-li.wave:last-child {
+li.circle-anim-li.wave.active:last-child {
     @include circle-wave($li-height, 82);
 }

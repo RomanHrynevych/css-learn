@@ -14,34 +14,27 @@ function animateValue(obj, start, end, duration) {
 
 const animationBlock = document.querySelectorAll(`.circle-anim-ul`);
 
+const ListArr = document.querySelectorAll(`.circle-anim-li`);
+
 const optionsSectionFade = {
   root: null,
-  threshold: 0.01,
+  threshold: 0.25,
 };
 
 const callbackSectionFade = function (entries, observer) {
   entries.forEach(function (entry) {
     if (!entry.isIntersecting) return;
+
     const type = entry.target.classList[1];
-
-    let head = document.getElementsByTagName("HEAD")[0];
-    let link = document.createElement("link");
-    link.rel = "stylesheet";
-    link.type = "text/css";
-    link.href = `src/css/circle-${type}.css`;
-    head.appendChild(link);
-
-    const circleArr = document.querySelector(`.circle-anim-ul.${type}`);
-    new Array(...circleArr.children).forEach((li, i) => {
-      const percentage = +li.getAttribute("circle-perc");
-      let duration;
-      if (type === `wave`) {
-        duration = (percentage / 50) * 1000;
-      } else if (type === "progress") {
-        duration = percentage * 1.5 * 10;
-      }
-      animateValue(li.children[0], 0, percentage, duration);
-    });
+    entry.target.classList.add("active");
+    const percentage = +entry.target.getAttribute("circle-perc");
+    let duration;
+    if (type === `wave`) {
+      duration = (percentage / 50) * 1000;
+    } else if (type === "progress") {
+      duration = percentage * 1.5 * 10;
+    }
+    animateValue(entry.target.children[0], 0, percentage, duration);
 
     observerSectionFade.unobserve(entry.target);
   });
@@ -52,6 +45,6 @@ const observerSectionFade = new IntersectionObserver(
   optionsSectionFade
 );
 
-animationBlock.forEach(function (elem) {
+ListArr.forEach(function (elem) {
   observerSectionFade.observe(elem);
 });

@@ -4,7 +4,6 @@
 @mixin circle-wave($height, $percentage) {
     @if $percentage > 0 and $percentage < 100 {
         width: $height;
-
         $main-color: color-picker($percentage);
         $main-color-for-text: color-picker-for-text($percentage);
         $color-dark: #1a1a1a;

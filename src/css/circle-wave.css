@@ -14,7 +14,7 @@
     transform: rotate(360deg);
   }
 }
-li.circle-anim-li.wave:first-child {
+li.circle-anim-li.wave.active:first-child {
   width: 12rem;
   -webkit-animation: border-anim10 0.25s ease-out forwards 1;
           animation: border-anim10 0.25s ease-out forwards 1;
@@ -40,7 +40,7 @@ li.circle-anim-li.wave:first-child {
     box-shadow: 0 0 5.3333333333px #fa2100;
   }
 }
-li.circle-anim-li.wave:first-child span {
+li.circle-anim-li.wave.active:first-child span {
   width: 100%;
   height: 12rem;
   border-radius: 50%;
@@ -75,14 +75,14 @@ li.circle-anim-li.wave:first-child span {
     text-shadow: 0 0 3px #fa2100;
   }
 }
-li.circle-anim-li.wave:first-child span::after {
+li.circle-anim-li.wave.active:first-child span::after {
   content: "";
   height: 250%;
   width: 250%;
   position: absolute;
   z-index: -1;
   left: -75%;
-  border-radius: 42%;
+  border-radius: 45%;
   -webkit-animation: rotate360 11.25s linear forwards infinite, color-anim10 0.25s ease-out forwards 1;
           animation: rotate360 11.25s linear forwards infinite, color-anim10 0.25s ease-out forwards 1;
 }
@@ -111,7 +111,7 @@ li.circle-anim-li.wave:first-child span::after {
   }
 }
 
-li.circle-anim-li.wave:nth-child(2) {
+li.circle-anim-li.wave.active:nth-child(2) {
   width: 12rem;
   -webkit-animation: border-anim27 0.675s ease-out forwards 1;
           animation: border-anim27 0.675s ease-out forwards 1;
@@ -137,7 +137,7 @@ li.circle-anim-li.wave:nth-child(2) {
     box-shadow: 0 0 5.9px #fa7d00;
   }
 }
-li.circle-anim-li.wave:nth-child(2) span {
+li.circle-anim-li.wave.active:nth-child(2) span {
   width: 100%;
   height: 12rem;
   border-radius: 50%;
@@ -172,14 +172,14 @@ li.circle-anim-li.wave:nth-child(2) span {
     text-shadow: 0 0 3px #fa7d00;
   }
 }
-li.circle-anim-li.wave:nth-child(2) span::after {
+li.circle-anim-li.wave.active:nth-child(2) span::after {
   content: "";
   height: 250%;
   width: 250%;
   position: absolute;
   z-index: -1;
   left: -75%;
-  border-radius: 45%;
+  border-radius: 46%;
   -webkit-animation: rotate360 13.375s linear forwards infinite, color-anim27 0.675s ease-out forwards 1;
           animation: rotate360 13.375s linear forwards infinite, color-anim27 0.675s ease-out forwards 1;
 }
@@ -208,7 +208,7 @@ li.circle-anim-li.wave:nth-child(2) span::after {
   }
 }
 
-li.circle-anim-li.wave:nth-child(3) {
+li.circle-anim-li.wave.active:nth-child(3) {
   width: 12rem;
   -webkit-animation: border-anim61 1.525s ease-out forwards 1;
           animation: border-anim61 1.525s ease-out forwards 1;
@@ -234,7 +234,7 @@ li.circle-anim-li.wave:nth-child(3) {
     box-shadow: 0 0 7.0333333333px #fafa00;
   }
 }
-li.circle-anim-li.wave:nth-child(3) span {
+li.circle-anim-li.wave.active:nth-child(3) span {
   width: 100%;
   height: 12rem;
   border-radius: 50%;
@@ -269,14 +269,14 @@ li.circle-anim-li.wave:nth-child(3) span {
     text-shadow: 0 0 3px #e4b900;
   }
 }
-li.circle-anim-li.wave:nth-child(3) span::after {
+li.circle-anim-li.wave.active:nth-child(3) span::after {
   content: "";
   height: 250%;
   width: 250%;
   position: absolute;
   z-index: -1;
   left: -75%;
-  border-radius: 43%;
+  border-radius: 44%;
   -webkit-animation: rotate360 17.625s linear forwards infinite, color-anim61 1.525s ease-out forwards 1;
           animation: rotate360 17.625s linear forwards infinite, color-anim61 1.525s ease-out forwards 1;
 }
@@ -305,7 +305,7 @@ li.circle-anim-li.wave:nth-child(3) span::after {
   }
 }
 
-li.circle-anim-li.wave:last-child {
+li.circle-anim-li.wave.active:last-child {
   width: 12rem;
   -webkit-animation: border-anim82 2.05s ease-out forwards 1;
           animation: border-anim82 2.05s ease-out forwards 1;
@@ -331,7 +331,7 @@ li.circle-anim-li.wave:last-child {
     box-shadow: 0 0 7.7333333333px #7dfa00;
   }
 }
-li.circle-anim-li.wave:last-child span {
+li.circle-anim-li.wave.active:last-child span {
   width: 100%;
   height: 12rem;
   border-radius: 50%;
@@ -366,14 +366,14 @@ li.circle-anim-li.wave:last-child span {
     text-shadow: 0 0 3px #44b900;
   }
 }
-li.circle-anim-li.wave:last-child span::after {
+li.circle-anim-li.wave.active:last-child span::after {
   content: "";
   height: 250%;
   width: 250%;
   position: absolute;
   z-index: -1;
   left: -75%;
-  border-radius: 42%;
+  border-radius: 45%;
   -webkit-animation: rotate360 20.25s linear forwards infinite, color-anim82 2.05s ease-out forwards 1;
           animation: rotate360 20.25s linear forwards infinite, color-anim82 2.05s ease-out forwards 1;
 }

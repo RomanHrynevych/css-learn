@@ -14,7 +14,7 @@
     transform: rotate(360deg);
   }
 }
-li.circle-anim-li.progress:first-child {
+li.circle-anim-li.progress.active:first-child {
   position: relative;
   -webkit-animation: border-anim-prog14 0.21s linear forwards;
           animation: border-anim-prog14 0.21s linear forwards;
@@ -39,7 +39,7 @@ li.circle-anim-li.progress:first-child {
     border: solid 1.5px #fa3600;
   }
 }
-li.circle-anim-li.progress:first-child span {
+li.circle-anim-li.progress.active:first-child span {
   -webkit-animation: text-anim-prog14 0.21s linear forwards;
           animation: text-anim-prog14 0.21s linear forwards;
 }
@@ -63,10 +63,10 @@ li.circle-anim-li.progress:first-child span {
     color: #fa3600;
   }
 }
-li.circle-anim-li.progress:first-child .pie {
+li.circle-anim-li.progress.active:first-child .pie {
   clip: rect(0, 12rem, 12rem, 6rem);
 }
-li.circle-anim-li.progress:first-child .pie .half-circle {
+li.circle-anim-li.progress.active:first-child .pie .half-circle {
   height: 100%;
   width: 100%;
   border: 0.3rem solid;
@@ -76,7 +76,7 @@ li.circle-anim-li.progress:first-child .pie .half-circle {
   left: 0;
   top: 0;
 }
-li.circle-anim-li.progress:first-child .pie .left-side {
+li.circle-anim-li.progress.active:first-child .pie .left-side {
   -webkit-animation: left-circle-anim-prog14 0.21s linear forwards;
           animation: left-circle-anim-prog14 0.21s linear forwards;
 }
@@ -100,11 +100,11 @@ li.circle-anim-li.progress:first-child .pie .left-side {
     border-color: #fa3600;
   }
 }
-li.circle-anim-li.progress:first-child .pie .right-side {
+li.circle-anim-li.progress.active:first-child .pie .right-side {
   display: none;
 }
 
-li.circle-anim-li.progress:nth-child(2) {
+li.circle-anim-li.progress.active:nth-child(2) {
   position: relative;
   -webkit-animation: border-anim-prog32 0.48s linear forwards;
           animation: border-anim-prog32 0.48s linear forwards;
@@ -129,7 +129,7 @@ li.circle-anim-li.progress:nth-child(2) {
     border: solid 1.5px #fa9800;
   }
 }
-li.circle-anim-li.progress:nth-child(2) span {
+li.circle-anim-li.progress.active:nth-child(2) span {
   -webkit-animation: text-anim-prog32 0.48s linear forwards;
           animation: text-anim-prog32 0.48s linear forwards;
 }
@@ -153,10 +153,10 @@ li.circle-anim-li.progress:nth-child(2) span {
     color: #fa9800;
   }
 }
-li.circle-anim-li.progress:nth-child(2) .pie {
+li.circle-anim-li.progress.active:nth-child(2) .pie {
   clip: rect(0, 12rem, 12rem, 6rem);
 }
-li.circle-anim-li.progress:nth-child(2) .pie .half-circle {
+li.circle-anim-li.progress.active:nth-child(2) .pie .half-circle {
   height: 100%;
   width: 100%;
   border: 0.3rem solid;
@@ -166,7 +166,7 @@ li.circle-anim-li.progress:nth-child(2) .pie .half-circle {
   left: 0;
   top: 0;
 }
-li.circle-anim-li.progress:nth-child(2) .pie .left-side {
+li.circle-anim-li.progress.active:nth-child(2) .pie .left-side {
   -webkit-animation: left-circle-anim-prog32 0.48s linear forwards;
           animation: left-circle-anim-prog32 0.48s linear forwards;
 }
@@ -190,11 +190,11 @@ li.circle-anim-li.progress:nth-child(2) .pie .left-side {
     border-color: #fa9800;
   }
 }
-li.circle-anim-li.progress:nth-child(2) .pie .right-side {
+li.circle-anim-li.progress.active:nth-child(2) .pie .right-side {
   display: none;
 }
 
-li.circle-anim-li.progress:nth-child(3) {
+li.circle-anim-li.progress.active:nth-child(3) {
   position: relative;
   -webkit-animation: border-anim-prog72 1.08s linear forwards;
           animation: border-anim-prog72 1.08s linear forwards;
@@ -219,7 +219,7 @@ li.circle-anim-li.progress:nth-child(3) {
     border: solid 1.5px #cefa00;
   }
 }
-li.circle-anim-li.progress:nth-child(3) span {
+li.circle-anim-li.progress.active:nth-child(3) span {
   -webkit-animation: text-anim-prog72 1.08s linear forwards;
           animation: text-anim-prog72 1.08s linear forwards;
 }
@@ -243,11 +243,11 @@ li.circle-anim-li.progress:nth-child(3) span {
     color: #cefa00;
   }
 }
-li.circle-anim-li.progress:nth-child(3) .pie {
+li.circle-anim-li.progress.active:nth-child(3) .pie {
   -webkit-animation: pie-anim-name72 0.75s linear forwards;
           animation: pie-anim-name72 0.75s linear forwards;
 }
-li.circle-anim-li.progress:nth-child(3) .pie .half-circle {
+li.circle-anim-li.progress.active:nth-child(3) .pie .half-circle {
   height: 100%;
   width: 100%;
   border: 0.3rem solid;
@@ -279,7 +279,7 @@ li.circle-anim-li.progress:nth-child(3) .pie .half-circle {
     clip: rect(auto, auto, auto, auto);
   }
 }
-li.circle-anim-li.progress:nth-child(3) .pie .left-side {
+li.circle-anim-li.progress.active:nth-child(3) .pie .left-side {
   -webkit-animation: left-circle-anim-prog72 1.08s linear forwards;
           animation: left-circle-anim-prog72 1.08s linear forwards;
 }
@@ -311,7 +311,7 @@ li.circle-anim-li.progress:nth-child(3) .pie .left-side {
     border-color: #cefa00;
   }
 }
-li.circle-anim-li.progress:nth-child(3) .pie .right-side {
+li.circle-anim-li.progress.active:nth-child(3) .pie .right-side {
   transform: rotate(-180deg);
   visibility: hidden;
   -webkit-animation: right-circle-anim-prog72 0.44s linear 0.75s forwards;
@@ -342,7 +342,7 @@ li.circle-anim-li.progress:nth-child(3) .pie .right-side {
   }
 }
 
-li.circle-anim-li.progress:last-child {
+li.circle-anim-li.progress.active:last-child {
   position: relative;
   -webkit-animation: border-anim-prog95 1.425s linear forwards;
           animation: border-anim-prog95 1.425s linear forwards;
@@ -367,7 +367,7 @@ li.circle-anim-li.progress:last-child {
     border: solid 1.5px #13fa00;
   }
 }
-li.circle-anim-li.progress:last-child span {
+li.circle-anim-li.progress.active:last-child span {
   -webkit-animation: text-anim-prog95 1.425s linear forwards;
           animation: text-anim-prog95 1.425s linear forwards;
 }
@@ -391,11 +391,11 @@ li.circle-anim-li.progress:last-child span {
     color: #13fa00;
   }
 }
-li.circle-anim-li.progress:last-child .pie {
+li.circle-anim-li.progress.active:last-child .pie {
   -webkit-animation: pie-anim-name95 0.75s linear forwards;
           animation: pie-anim-name95 0.75s linear forwards;
 }
-li.circle-anim-li.progress:last-child .pie .half-circle {
+li.circle-anim-li.progress.active:last-child .pie .half-circle {
   height: 100%;
   width: 100%;
   border: 0.3rem solid;
@@ -427,7 +427,7 @@ li.circle-anim-li.progress:last-child .pie .half-circle {
     clip: rect(auto, auto, auto, auto);
   }
 }
-li.circle-anim-li.progress:last-child .pie .left-side {
+li.circle-anim-li.progress.active:last-child .pie .left-side {
   -webkit-animation: left-circle-anim-prog95 1.425s linear forwards;
           animation: left-circle-anim-prog95 1.425s linear forwards;
 }
@@ -459,7 +459,7 @@ li.circle-anim-li.progress:last-child .pie .left-side {
     border-color: #13fa00;
   }
 }
-li.circle-anim-li.progress:last-child .pie .right-side {
+li.circle-anim-li.progress.active:last-child .pie .right-side {
   transform: rotate(-180deg);
   visibility: hidden;
   -webkit-animation: right-circle-anim-prog95 0.9s linear 0.75s forwards;
