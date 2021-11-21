@@ -29,13 +29,15 @@
     <script defer src="src/js/main.js"></script>
 
     <!-- JS Plugins src's -->
-    <!-- Fullpage -->
-    <script defer src="plugins/fullpage/fullpage.js"></script>
-    <script defer src="plugins/fullpage/fullpage-script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body class="dark">
     <div id="fullpage">
-      <div class="section text">Scroll to see animation</div>
+      <div class="section full">
+        <div class="text">
+          <span>Scroll to see animation</span>
+        </div>
+      </div>
       <div class="section">
         <ul class="circle-anim-ul wave">
           <li class="circle-anim-li wave" circle-perc="10">
@@ -84,7 +86,12 @@
           </li>
         </ul>
       </div>
-      <div class="section footer">Reveal code soon</div>
+      <div class="section">
+        <div class="chart">
+          <canvas id="myChart"></canvas>
+        </div>
+      </div>
+      <div class="section full footer">Reveal code soon</div>
     </div>
   </body>
 </html>

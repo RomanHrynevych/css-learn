@@ -18,7 +18,7 @@ const ListArr = document.querySelectorAll(`.circle-anim-li`);
 
 const optionsSectionFade = {
   root: null,
-  threshold: 0.25,
+  threshold: 0.8,
 };
 
 const callbackSectionFade = function (entries, observer) {
@@ -48,3 +48,46 @@ const observerSectionFade = new IntersectionObserver(
 ListArr.forEach(function (elem) {
   observerSectionFade.observe(elem);
 });
+
+// Chart
+const chartBlock = document.querySelector(`#myChart`);
+
+const optionsChart = {
+  root: null,
+  threshold: 0.8,
+};
+
+const callbackChart = function (entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
+
+  const ctx = document.getElementById("myChart").getContext("2d");
+  const myChart = new Chart(ctx, {
+    type: "line",
+    data: {
+      labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+      datasets: [
+        {
+          label: "amount of days",
+          data: [12, 19, 3, 5, 2, 3],
+          backgroundColor: ["rgba(255, 99, 132, 0.2)"],
+          borderColor: ["rgba(255, 99, 132, 1)"],
+          borderWidth: 2,
+        },
+      ],
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true,
+        },
+      },
+    },
+  });
+
+  observerChart.unobserve(entry.target);
+};
+
+const observerChart = new IntersectionObserver(callbackChart, optionsChart);
+
+observerChart.observe(chartBlock);

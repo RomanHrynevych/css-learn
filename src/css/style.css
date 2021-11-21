@@ -44,8 +44,11 @@ body {
 body .circle-anim-ul {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+  width: 75%;
+  max-width: 90%;
+  margin: 0 auto;
 }
 @media screen and (max-width: 1036px) {
   body .circle-anim-ul {
@@ -93,6 +96,19 @@ body .circle-anim-ul li.circle-anim-li.progress .pie {
   top: 0;
   border-radius: 50%;
   border: solid 2px var(--color-dark);
+}
+
+.section {
+  height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section.full {
+  height: 100vh;
+}
+.section .chart {
+  width: 80%;
 }
 
 .text {
