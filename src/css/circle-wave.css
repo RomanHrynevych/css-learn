@@ -44,7 +44,7 @@ li.circle-anim-li.wave.active:first-child span {
   width: 100%;
   height: 12rem;
   border-radius: 50%;
-  border: solid 3px #1a1a1a;
+  border: solid 3px var(--color-dark);
   position: relative;
   overflow: hidden;
   font-size: 1.8rem;
@@ -82,7 +82,7 @@ li.circle-anim-li.wave.active:first-child span::after {
   position: absolute;
   z-index: -1;
   left: -75%;
-  border-radius: 45%;
+  border-radius: 46%;
   -webkit-animation: rotate360 11.25s linear forwards infinite, color-anim10 0.25s ease-out forwards 1;
           animation: rotate360 11.25s linear forwards infinite, color-anim10 0.25s ease-out forwards 1;
 }
@@ -141,7 +141,7 @@ li.circle-anim-li.wave.active:nth-child(2) span {
   width: 100%;
   height: 12rem;
   border-radius: 50%;
-  border: solid 3px #1a1a1a;
+  border: solid 3px var(--color-dark);
   position: relative;
   overflow: hidden;
   font-size: 1.8rem;
@@ -179,7 +179,7 @@ li.circle-anim-li.wave.active:nth-child(2) span::after {
   position: absolute;
   z-index: -1;
   left: -75%;
-  border-radius: 46%;
+  border-radius: 45%;
   -webkit-animation: rotate360 13.375s linear forwards infinite, color-anim27 0.675s ease-out forwards 1;
           animation: rotate360 13.375s linear forwards infinite, color-anim27 0.675s ease-out forwards 1;
 }
@@ -238,7 +238,7 @@ li.circle-anim-li.wave.active:nth-child(3) span {
   width: 100%;
   height: 12rem;
   border-radius: 50%;
-  border: solid 3px #1a1a1a;
+  border: solid 3px var(--color-dark);
   position: relative;
   overflow: hidden;
   font-size: 1.8rem;
@@ -335,7 +335,7 @@ li.circle-anim-li.wave.active:last-child span {
   width: 100%;
   height: 12rem;
   border-radius: 50%;
-  border: solid 3px #1a1a1a;
+  border: solid 3px var(--color-dark);
   position: relative;
   overflow: hidden;
   font-size: 1.8rem;
@@ -373,7 +373,7 @@ li.circle-anim-li.wave.active:last-child span::after {
   position: absolute;
   z-index: -1;
   left: -75%;
-  border-radius: 45%;
+  border-radius: 43%;
   -webkit-animation: rotate360 20.25s linear forwards infinite, color-anim82 2.05s ease-out forwards 1;
           animation: rotate360 20.25s linear forwards infinite, color-anim82 2.05s ease-out forwards 1;
 }

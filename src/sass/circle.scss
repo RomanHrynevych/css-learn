@@ -6,7 +6,6 @@
         width: $height;
         $main-color: color-picker($percentage);
         $main-color-for-text: color-picker-for-text($percentage);
-        $color-dark: #1a1a1a;
 
         $color-anim-name: quote(color-anim + $percentage);
         $border-anim-name: quote(border-anim + $percentage);
@@ -33,7 +32,7 @@
             height: $height;
 
             border-radius: 50%;
-            border: solid 3px $color-dark;
+            border: solid 3px var(--color-dark);
 
             position: relative;
             overflow: hidden;
